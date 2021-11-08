@@ -1,0 +1,10 @@
+@import "assets/styles/mixins/breakpoints";
+
+.rateContainer {
+    &>i {
+        @include breakpoint("md-max") {
+            width: 128px;
+            height: 30px;
+        }
+    }
+}
