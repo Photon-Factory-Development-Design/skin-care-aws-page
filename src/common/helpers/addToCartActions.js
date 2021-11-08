@@ -138,7 +138,7 @@ export const addToCartInBackground = (event, link) => {
 };
 
 export const addToCartInNewWindow = (link) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     if (window.innerWidth <= 640) {
         // if width is smaller then 640px, create a temporary a element that will open the link in new tab
