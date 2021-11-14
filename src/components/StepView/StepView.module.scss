@@ -53,3 +53,20 @@
         min-width: 400px;
     }
 }
+
+.step_container {
+    font-size: 100px;
+    color: $step_text_color;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    .step {
+        font-family: 'NeoncityScript';
+        line-height: 0.9;
+    }
+
+    .number {
+        margin-top: -80px;
+    }
+}

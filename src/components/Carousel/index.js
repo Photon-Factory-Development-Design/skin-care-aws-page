@@ -34,6 +34,7 @@ const Carousel = ({ currentAnswers, activeIndex, onCompleteAnswer }) => {
                     {...question}
                     onCompleteAnswer={onCompleteAnswer}
                     currentAnswers={currentAnswers}
+                    step={index}
                 />
             ))}
         </MuiCarousel>

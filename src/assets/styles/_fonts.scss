@@ -26,13 +26,14 @@
         url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.eot") format('ttf')
 }
 
-
 @font-face {
     font-family: "NeoncityScript";
-    fallback: fallback;
-    src: url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.woff") format('woff'),
-        url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.ttf") format('ttf'),
-        url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.eot") format('ttf')
+    src: url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/skin-care-aws-page@1.0.0/src/assets/fonts/Neoncity/NeoncityScript-K77Je.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "NeoncityDisplay";
+    src: url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/skin-care-aws-page@1.0.0/src/assets/fonts/Neoncity/NeoncityDisplay-MVVLv.otf") format('opentype');
 }
 
 .react-multi-carousel-list {
