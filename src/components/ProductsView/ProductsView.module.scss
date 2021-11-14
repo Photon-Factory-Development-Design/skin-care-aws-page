@@ -6,38 +6,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .products_section {
     padding: 20px 0px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 3px solid $gray_color;
 
     .title {
         text-align: center;
         @include text_title;
+        color: $dark_gray_color;
     }
 
     .description {
         margin: 10px 0px;
         text-align: center;
         @include normal_text;
+        color: $middle_gray_color;
+        max-width: 600px;
     }
 
     .products {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        border: 3px solid $gray_color;
+        justify-content: space-around;
+        width: 100%;
 
         margin: 20px 0px;
+        padding-bottom: 40px;
 
         & > .product_item {
             flex: 1;
         }
-
-        &.is_last {
-            border: 0px solid $gray_color;
-        }
     }
+}
+
+.isLast {
+    border-bottom: 0px solid $gray_color;
 }

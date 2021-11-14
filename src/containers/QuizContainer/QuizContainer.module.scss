@@ -1,7 +1,25 @@
-@import "assets/styles/mixins/breakpoints";
+@import 'assets/styles/mixins/breakpoints';
+
+.root {
+    padding-top: 80px;
+    min-height: 800px;
+    position: relative;
+    background-color: #f9f3ee;
+
+    & > img {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        z-index: -1;
+    }
+}
 
 .recommendText {
-    @include breakpoint("md-max") {
+    @include breakpoint('md-max') {
         font-size: 30px !important;
     }
+}
+
+.no_bg {
+    background-color: transparent;
 }

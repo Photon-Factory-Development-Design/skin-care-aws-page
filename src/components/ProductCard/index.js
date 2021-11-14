@@ -91,7 +91,7 @@ const ProductCard = ({
                     </div>
                     <Link
                         href="123"
-                        asin={asin}
+                        asin={asin || ''}
                         className="a-button-text"
                         aria-hidden="true">
                         Add to Cart

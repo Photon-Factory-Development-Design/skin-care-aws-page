@@ -3,10 +3,12 @@ import products from 'common/data/products';
 class Question {
     questions = [
         {
+            showFaceImage: true,
             label: 'Answer a short series of questions to help you identify your skin concerns and create your personalized Perfect Skincare Routine!',
             answers: [{ id: 'take_quiz', label: 'Take the Quiz' }]
         },
         {
+            showFaceImage: true,
             label: 'Create your personalized Perfect Skincare Routine if there was something you could change or improve about your skin, what would it be? Pick one...',
             answers: [
                 { id: 'line_wrinkles', label: 'Lines/Wrinkles' },
@@ -17,6 +19,7 @@ class Question {
             ]
         },
         {
+            showBg: true,
             label: 'What else would you change or improve about your skin?',
             answers: [
                 { id: 'line_wrinkles', label: 'Lines/Wrinkles' },
@@ -33,6 +36,7 @@ class Question {
             }
         },
         {
+            showBg: true,
             label: 'Would you call your skin:',
             answers: [
                 { id: 'dry', label: 'Dry/Very Dry Everywhere' },
@@ -41,6 +45,7 @@ class Question {
             ]
         },
         {
+            showBg: true,
             label: 'What other parts of the body are you interested in? Select all that apply:',
             answers: [
                 { id: 'eyes', label: 'Eyes' },
@@ -51,6 +56,7 @@ class Question {
             ]
         },
         {
+            showBg: true,
             label: 'Do you prefer your sunscreen to be:',
             answers: [
                 { id: 'matte', label: 'Matte, Universal Tint' },
@@ -201,6 +207,10 @@ class Question {
     getQuestionForStep = (step) => {
         return this.questions[step];
     };
+
+    getQuestionsLength = () => {
+        return this.questions.length;
+    }
 
     /**
      * @return Array of Product Asins

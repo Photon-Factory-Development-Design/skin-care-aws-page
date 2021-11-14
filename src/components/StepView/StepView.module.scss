@@ -49,6 +49,10 @@
 }
 
 .go_next {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
     & > button {
         min-width: 400px;
     }
@@ -58,7 +62,7 @@
     font-size: 100px;
     color: $step_text_color;
     position: absolute;
-    bottom: 0px;
+    top: 50px;
     right: 0px;
 
     .step {
@@ -69,4 +73,20 @@
     .number {
         margin-top: -80px;
     }
+}
+
+.face_image {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & > img {
+        max-width: 500px;
+    }
+}
+
+.quiz_section {
+    width: 100%;
+    position: relative;
 }

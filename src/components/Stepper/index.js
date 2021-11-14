@@ -12,7 +12,7 @@ import StepIcon from './StepIcon/StepIcon';
 
 const useStyles = makeStyles({
     root: {
-        backgroundColor: '#F3EDEC'
+        backgroundColor: 'transparent'
     },
     iconContainer: {
         transform: 'scale(1)'

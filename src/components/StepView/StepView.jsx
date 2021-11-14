@@ -44,7 +44,7 @@ class StepView extends React.Component {
     };
 
     render() {
-        const { label, isMulti, step } = this.props;
+        const { label, isMulti, showFaceImage, step } = this.props;
         const { selectedAnswers } = this.state;
 
         const _answers = this.getAnswers();
@@ -53,30 +53,45 @@ class StepView extends React.Component {
             <div className={styles.root}>
                 <div className={styles.label}>{label}</div>
 
-                <div
-                    className={cn(styles.answers, {
-                        [styles.one_column]: _answers.length < 4
-                    })}>
-                    {_answers.map((answer) => (
-                        <div key={answer.id} className={styles.answer_item}>
-                            <Button
-                                onClick={() => this.onClickAnswer(answer)}
-                                active={selectedAnswers[answer.id]}>
-                                {answer.label}
+                <div className={styles.quiz_section}>
+                    {showFaceImage && (
+                        <div className={styles.face_image}>
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/skin-care-aws-page@1.0.2/src/assets/images/illustrator.png"
+                                alt="face"
+                            />
+                        </div>
+                    )}
+
+                    <div
+                        className={cn(styles.answers, {
+                            [styles.one_column]: _answers.length < 4
+                        })}>
+                        {_answers.map((answer) => (
+                            <div key={answer.id} className={styles.answer_item}>
+                                <Button
+                                    onClick={() => this.onClickAnswer(answer)}
+                                    active={selectedAnswers[answer.id]}>
+                                    {answer.label}
+                                </Button>
+                            </div>
+                        ))}
+                    </div>
+
+                    {isMulti && (
+                        <div className={styles.go_next}>
+                            <Button onClick={() => this.onGoNext()}>
+                                Next
                             </Button>
                         </div>
-                    ))}
-                </div>
+                    )}
 
-                {isMulti && (
-                    <div className={styles.go_next}>
-                        <Button onClick={() => this.onGoNext()}>Next</Button>
+                    <div className={styles.step_container}>
+                        <div className={styles.step}>Step</div>
+                        <div className={styles.number}>
+                            {step.pad && step.pad(2)}
+                        </div>
                     </div>
-                )}
-
-                <div className={styles.step_container}>
-                    <div className={styles.step}>Step</div>
-                    <div className={styles.number}>{step.pad && step.pad(2)}</div>
                 </div>
             </div>
         );
