@@ -1,0 +1,23 @@
+@import 'assets/styles/mixins/breakpoints';
+@import 'assets/styles/variables/colors';
+
+@mixin active {
+    background-color: $primary_color;
+    color: white;
+    font-weight: bold;
+}
+
+.root {
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid $gray_color !important;
+    padding: 10px;
+
+    &:hover {
+        @include active;
+    }
+}
+
+.active {
+    @include active;
+}

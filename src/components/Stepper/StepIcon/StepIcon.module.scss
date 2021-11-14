@@ -1,0 +1,21 @@
+@import 'assets/styles/mixins/breakpoints';
+@import 'assets/styles/variables/colors';
+
+.root {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: $gray_color;
+    border: 1px solid $gray_color;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.active, .completed {
+    color: white;
+    background-color: $primary_color;
+}

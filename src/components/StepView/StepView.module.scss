@@ -1,0 +1,55 @@
+@import 'assets/styles/mixins/breakpoints';
+@import 'assets/styles/variables/colors';
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.label {
+    color: $gray_color;
+    text-align: center;
+}
+
+.answers {
+    width: 100%;
+    margin: 50px 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & > .answer_item {
+        display: flex;
+        margin: 20px 0px;
+        width: 50%;
+        justify-content: center;
+
+        & > button {
+            min-width: 300px;
+        }
+    }
+
+    &.one_column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > .answer_item {
+            margin: 20px 0px;
+            align-items: center;
+
+            & > button {
+                min-width: 400px;
+            }
+        }
+    }
+}
+
+.go_next {
+    & > button {
+        min-width: 400px;
+    }
+}

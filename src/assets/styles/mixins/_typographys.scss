@@ -1,0 +1,13 @@
+@import 'assets/styles/variables/colors';
+
+@mixin text_title {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@mixin normal_text {
+    color: $gray_color;
+    font-size: 18px;
+    font-weight: normal;
+}

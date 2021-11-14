@@ -7,8 +7,8 @@ import {
     StepLabel,
     Button
 } from '@material-ui/core';
-// styles
-import styles from './Stepper.module.scss';
+// core components
+import StepIcon from './StepIcon/StepIcon';
 
 const useStyles = makeStyles({
     root: {
@@ -21,6 +21,14 @@ const useStyles = makeStyles({
         color: '#003D54 !important'
     }
 });
+
+Number.prototype.pad = function (size) {
+    var s = String(this);
+    while (s.length < (size || 2)) {
+        s = '0' + s;
+    }
+    return s;
+};
 
 const Stepper = ({
     steps,
@@ -55,16 +63,17 @@ const Stepper = ({
                                 classes={{
                                     iconContainer: classes.iconContainer,
                                     labelContainer: classes.labelContainer
+                                }}
+                                StepIconComponent={StepIcon}
+                                StepIconProps={{
+                                    label: index.pad(2),
+                                    completed: activeStep >= index
                                 }}>
-                                <div className={styles.stepperLabel}>{label}</div>
-                                {steps.length > 1 &&
-                                    steps.length === index + 1 && (
-                                        <Button
-                                            variant="text"
-                                            onClick={onGoBack}>
-                                            Go Back
-                                        </Button>
-                                    )}
+                                {activeStep > 0 && activeStep === index && (
+                                    <Button variant="text" onClick={onGoBack}>
+                                        Go Back
+                                    </Button>
+                                )}
                             </StepLabel>
                         </StepButton>
                     </Step>

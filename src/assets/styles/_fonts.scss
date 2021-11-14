@@ -26,6 +26,15 @@
         url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.eot") format('ttf')
 }
 
+
+@font-face {
+    font-family: "NeoncityScript";
+    fallback: fallback;
+    src: url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.woff") format('woff'),
+        url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.ttf") format('ttf'),
+        url("https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/gold-bond-react-app/src/assets/fonts/revicons/revicons.eot") format('ttf')
+}
+
 .react-multi-carousel-list {
     display: flex;
     align-items: center;
