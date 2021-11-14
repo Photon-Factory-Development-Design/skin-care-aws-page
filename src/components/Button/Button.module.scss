@@ -21,3 +21,7 @@
 .active {
     @include active;
 }
+
+.gray {
+    background-color: $middle_gray_color;
+}

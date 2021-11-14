@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 // core components
+import Button from 'components/Button/Button';
 import ProductCard from 'components/ProductCard';
 // material ui components
 import Container from '@material-ui/core/Container';
@@ -47,6 +48,17 @@ class ProductsView extends React.Component {
                         otherConcern,
                         true
                     )}
+
+                    <Button
+                        gray
+                        icon={
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/skin-care-aws-page@1.0.4/src/assets/images/retake.png"
+                                alt="retake"
+                            />
+                        }>
+                        Retake Quiz
+                    </Button>
                 </div>
             </Container>
         );
