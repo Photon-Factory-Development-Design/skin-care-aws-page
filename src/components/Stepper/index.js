@@ -9,6 +9,8 @@ import {
 } from '@material-ui/core';
 // core components
 import StepIcon from './StepIcon/StepIcon';
+// styles
+import styles from './Stepper.module.scss';
 
 const useStyles = makeStyles({
     root: {
@@ -70,7 +72,7 @@ const Stepper = ({
                                     completed: activeStep >= index
                                 }}>
                                 {activeStep > 0 && activeStep === index && (
-                                    <Button variant="text" onClick={onGoBack}>
+                                    <Button className={styles.go_back} variant="text" onClick={onGoBack}>
                                         Go Back
                                     </Button>
                                 )}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { QuizContainer } from 'containers';
+import './assets/styles/base.scss';
 
 ReactDOM.render(
     <React.StrictMode>
