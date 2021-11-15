@@ -91,7 +91,7 @@
     }
 
     .number {
-        margin-top: -80px;
+        line-height: 0px;
     }
 
     @include breakpoint('max-sm') {
