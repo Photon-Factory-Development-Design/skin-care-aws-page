@@ -13,10 +13,7 @@ class QuizContainer extends React.Component {
     onCompleteAnswer = (answer) => {
         this.setState((prev) => ({
             activeStep: prev.activeStep + 1,
-            answers: [].concat(
-                prev.answers,
-                [answer]
-            )
+            answers: [].concat(prev.answers, [answer])
         }));
     };
 
@@ -42,8 +39,6 @@ class QuizContainer extends React.Component {
         if (this.isQuizCompleted()) {
             // TODO: questions
             const { answers } = this.state;
-            
-            console.log(answers);
 
             const otherConcerns = questions.getProductsForAnswer([
                 answers[1],
@@ -61,11 +56,25 @@ class QuizContainer extends React.Component {
         return null;
     };
 
+    retakeQuiz = () => {
+        console.log('retakeQuiz');
+        this.setState({
+            activeStep: 0,
+            answers: []
+        });
+    };
+
     showProducts = () => {
         const [recommended, others] = this.getProducts();
 
         console.log(recommended, others);
-        return <ProductsView recommended={recommended} otherConcern={others} />;
+        return (
+            <ProductsView
+                recommended={recommended}
+                otherConcern={others}
+                retakeQuiz={this.retakeQuiz}
+            />
+        );
     };
 
     render() {

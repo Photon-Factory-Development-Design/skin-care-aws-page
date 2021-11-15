@@ -31,7 +31,7 @@ class ProductsView extends React.Component {
     };
 
     render() {
-        const { recommended, otherConcern } = this.props;
+        const { recommended, otherConcern, retakeQuiz } = this.props;
 
         return (
             <Container>
@@ -50,11 +50,13 @@ class ProductsView extends React.Component {
                     )}
 
                     <Button
+                        onClick={retakeQuiz}
                         gray
                         icon={
                             <img
                                 src="https://cdn.jsdelivr.net/gh/Photon-Factory-Development-Design/skin-care-aws-page@1.0.4/src/assets/images/retake.png"
                                 alt="retake"
+                                width={15}
                             />
                         }>
                         Retake Quiz

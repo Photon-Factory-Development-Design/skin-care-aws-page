@@ -11,7 +11,7 @@ const Button = ({ active = false, gray, icon, children, ...props }) => {
                 [styles.active]: active,
                 [styles.gray]: gray
             })}>
-            {icon && icon}
+            {icon && <span className={styles.icon}>{icon}</span>}
             {children}
         </button>
     );
