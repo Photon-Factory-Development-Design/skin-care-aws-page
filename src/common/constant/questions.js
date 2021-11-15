@@ -8,7 +8,7 @@ class Question {
             answers: [{ id: 'take_quiz', label: 'Take the Quiz' }]
         },
         {
-            showFaceImage: true,
+            showBg: true,
             label: 'Create your personalized Perfect Skincare Routine if there was something you could change or improve about your skin, what would it be? Pick one...',
             answers: [
                 { id: 'line_wrinkles', label: 'Lines/Wrinkles' },

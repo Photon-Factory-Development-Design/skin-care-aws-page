@@ -29,6 +29,10 @@
 
         & > button {
             min-width: 300px;
+
+            @include breakpoint('max-sm') {
+                min-width: 100%;
+            }
         }
     }
 
@@ -43,8 +47,18 @@
 
             & > button {
                 min-width: 400px;
+
+                @include breakpoint('max-sm') {
+                    min-width: 200px;
+                }
             }
         }
+    }
+
+    @include breakpoint('max-sm') {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -52,9 +66,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+
     & > button {
         min-width: 400px;
+
+        @include breakpoint('max-sm') {
+            min-width: 200px;
+        }
     }
 }
 
@@ -64,6 +82,8 @@
     position: absolute;
     top: 50px;
     right: 0px;
+    z-index: -1;
+    text-align: center;
 
     .step {
         font-family: 'NeoncityScript';
@@ -72,6 +92,12 @@
 
     .number {
         margin-top: -80px;
+    }
+
+    @include breakpoint('max-sm') {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 }
 
@@ -83,6 +109,10 @@
 
     & > img {
         max-width: 500px;
+
+        @include breakpoint('max-sm') {
+            max-width: 80%;
+        }
     }
 }
 

@@ -45,6 +45,10 @@
         & > .product_item {
             flex: 1;
         }
+
+        @include breakpoint('max-sm') {
+            flex-direction: column;
+        }
     }
 }
 
