@@ -2,12 +2,13 @@
 @import 'assets/styles/variables/colors';
 
 .root {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background-color: white;
-    color: $gray_color;
-    border: 1px solid $gray_color;
+    background-color: transparent;
+    color: $dark_gray_color;
+    border: 1px solid $dark_gray_color;
+    font-size: 25px;
 
     display: flex;
     flex-direction: row;
@@ -18,4 +19,9 @@
 .active, .completed {
     color: white;
     background-color: $primary_color;
+}
+
+.stepRoot {
+    & > .MuiStepperConnector-root {
+    }
 }

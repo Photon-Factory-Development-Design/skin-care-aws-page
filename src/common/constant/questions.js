@@ -2,14 +2,14 @@ import products from 'common/data/products';
 
 class Question {
     questions = [
-        {
-            showFaceImage: true,
-            label: 'Answer a short series of questions to help you identify your skin concerns and create your personalized Perfect Skincare Routine!',
-            answers: [{ id: 'take_quiz', label: 'Take the Quiz' }]
-        },
+        // {
+        //     showFaceImage: true,
+        //     label: 'Answer a short series of questions to help you identify your skin concerns and create your personalized Perfect Skincare Routine!',
+        //     answers: [{ id: 'take_quiz', label: 'Take the Quiz' }]
+        // },
         {
             showBg: true,
-            label: 'Create your personalized Perfect Skincare Routine if there was something you could change or improve about your skin, what would it be? Pick one...',
+            label: 'Create your personalized Perfect Skincare Routine if there was something you could change or improve about your skin, what would it be? Pick one',
             answers: [
                 { id: 'line_wrinkles', label: 'Lines/Wrinkles' },
                 { id: 'hyperpigmentation', label: 'Hyperpigmentation' },
@@ -31,7 +31,7 @@ class Question {
             isMulti: true,
             fn: (answers, currentAnswers) => {
                 return answers.filter(
-                    (answer) => answer.id !== currentAnswers[1]
+                    (answer) => answer.id !== currentAnswers[0]
                 );
             }
         },
@@ -71,7 +71,7 @@ class Question {
                 recommended: ['B08KQKJYRG', 'B005MJGUXU'],
                 eyes: ['B010QROSR2', 'B005MJGUXU'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -79,7 +79,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B005MJGUXU'],
                 eyes: ['B010QROSR2', 'B005MJGUXU'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -97,7 +97,7 @@ class Question {
                 recommended: ['B08KQKJYRG', 'B01BOM4KFS'],
                 eyes: ['B010QROSR2'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -105,7 +105,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B01BOM4KFS'],
                 eyes: ['B010QROSR2'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -113,7 +113,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B01BOM4KFS'],
                 eyes: ['B010QROSR2'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             }
@@ -123,7 +123,7 @@ class Question {
                 recommended: ['B08KQKJYRG', 'B004U5DNMI'],
                 eyes: ['B010QROSR2', 'B000GX9A2K'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -131,7 +131,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B004U5DNMI'],
                 eyes: ['B010QROSR2', 'B000GX9A2K'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -139,7 +139,7 @@ class Question {
                 recommended: ['B8KQLMXFR', 'B004U5DNMI'],
                 eyes: ['B010QROSR2', 'B000GX9A2K'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             }
@@ -149,7 +149,7 @@ class Question {
                 recommended: ['B08KQKJYRG', 'B01MYCMZ6P'],
                 eyes: ['B010QROSR2', 'B001BBOGCK'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -157,7 +157,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B01MYCMZ6P'],
                 eyes: ['B010QROSR2', 'B001BBOGCK'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -165,7 +165,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B01MYCMZ6P'],
                 eyes: ['B010QROSR2', 'B001BBOGCK'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             }
@@ -175,7 +175,7 @@ class Question {
                 recommended: ['B08KQKJYRG', 'B01J7Y5CBQ'],
                 eyes: ['B010QROSR2', 'B000GX9A2K'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -183,7 +183,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B01J7Y5CBQ'],
                 eyes: ['B010QROSR2', 'B000GX9A2K'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             },
@@ -191,7 +191,7 @@ class Question {
                 recommended: ['B08KQLMXFR', 'B01J7Y5CBQ'],
                 eyes: ['B010QROSR2', 'B000GX9A2K'],
                 cellulite: ['B07DWVXT2G'],
-                hand: ['B07KRCX6CH'],
+                hands: ['B07KRCX6CH'],
                 neck: ['B00P2N1EB4'],
                 body: ['B003GRP068']
             }
@@ -217,6 +217,7 @@ class Question {
      * @param {*} answer array of question answer path
      */
     getProductsForAnswer = (answer) => {
+        console.log('getProductsForAnswer', answer)
         let _productAsins = this.productsMap;
 
         answer.forEach((item) => {

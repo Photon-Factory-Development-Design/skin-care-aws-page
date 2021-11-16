@@ -42,12 +42,6 @@ class ProductsView extends React.Component {
                         recommended,
                         false
                     )}
-                    {this.renderProductSection(
-                        'OTHER AREAS OF CONCERN',
-                        'We recommend the following products to specifically address stated areas of concern (including eyes, neck, hand, lips and body).',
-                        otherConcern,
-                        true
-                    )}
 
                     <Button
                         onClick={retakeQuiz}
@@ -61,6 +55,15 @@ class ProductsView extends React.Component {
                         }>
                         Retake Quiz
                     </Button>
+
+                    <hr />
+
+                    {this.renderProductSection(
+                        'OTHER AREAS OF CONCERN',
+                        'We recommend the following products to specifically address stated areas of concern (including eyes, neck, hand, lips and body).',
+                        otherConcern,
+                        true
+                    )}
                 </div>
             </Container>
         );

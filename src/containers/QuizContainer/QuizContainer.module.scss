@@ -1,4 +1,5 @@
 @import 'assets/styles/mixins/breakpoints';
+@import 'assets/styles/variables/colors';
 
 .root {
     padding-top: 80px;
@@ -31,4 +32,8 @@
 
 .no_bg {
     background-color: transparent;
+}
+
+.product_bg {
+    background-color: $product_bg_color;
 }

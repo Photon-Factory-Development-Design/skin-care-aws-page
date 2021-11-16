@@ -15,7 +15,8 @@
 
 .answers {
     width: 100%;
-    margin: 50px 0px;
+    margin: 50px auto;
+    max-width: 650px;
 
     display: flex;
     flex-direction: row;

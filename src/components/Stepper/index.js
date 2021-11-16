@@ -57,7 +57,10 @@ const Stepper = ({
                 const stepProps = {};
                 const buttonProps = {};
                 return (
-                    <Step key={label} {...stepProps}>
+                    <Step
+                        key={label}
+                        classes={{ root: styles.stepRoot }}
+                        {...stepProps}>
                         <StepButton
                             onClick={() => onUpdateIndex(index)}
                             {...buttonProps}>
@@ -68,11 +71,14 @@ const Stepper = ({
                                 }}
                                 StepIconComponent={StepIcon}
                                 StepIconProps={{
-                                    label: index.pad(2),
+                                    label: (index + 1).pad(2),
                                     completed: activeStep >= index
                                 }}>
                                 {activeStep > 0 && activeStep === index && (
-                                    <Button className={styles.go_back} variant="text" onClick={onGoBack}>
+                                    <Button
+                                        className={styles.go_back}
+                                        variant="text"
+                                        onClick={onGoBack}>
                                         Go Back
                                     </Button>
                                 )}

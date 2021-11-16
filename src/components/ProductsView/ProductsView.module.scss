@@ -8,6 +8,11 @@
     align-items: center;
     width: 100%;
     padding-bottom: 50px;
+
+    & > hr {
+        width: 100%;
+        border-bottom: 3px solid $gray_color;
+    }
 }
 
 .products_section {
@@ -16,7 +21,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    border-bottom: 3px solid $gray_color;
 
     .title {
         text-align: center;

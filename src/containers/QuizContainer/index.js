@@ -39,15 +39,16 @@ class QuizContainer extends React.Component {
         if (this.isQuizCompleted()) {
             // TODO: questions
             const { answers } = this.state;
+            console.log(answers);
 
             const otherConcerns = questions.getProductsForAnswer([
-                answers[1],
-                answers[3],
-                answers[4]
+                answers[0],
+                answers[2],
+                answers[3]
             ]);
             const recommendeds = questions.getProductsForAnswer([
-                answers[1],
-                answers[3],
+                answers[0],
+                answers[2],
                 'recommended'
             ]);
 
@@ -57,7 +58,6 @@ class QuizContainer extends React.Component {
     };
 
     retakeQuiz = () => {
-        console.log('retakeQuiz');
         this.setState({
             activeStep: 0,
             answers: []
@@ -67,7 +67,6 @@ class QuizContainer extends React.Component {
     showProducts = () => {
         const [recommended, others] = this.getProducts();
 
-        console.log(recommended, others);
         return (
             <ProductsView
                 recommended={recommended}
@@ -86,12 +85,13 @@ class QuizContainer extends React.Component {
         return (
             <div
                 className={cn(styles.root, {
-                    [styles.no_bg]: currentQuestion && currentQuestion.showBg
+                    [styles.no_bg]: currentQuestion && currentQuestion.showBg,
+                    [styles.product_bg]: isQuizCompleted
                 })}>
                 {!isQuizCompleted && (
                     <Container>
                         <Stepper
-                            steps={['00', '01', '02', '03', '04', '05']}
+                            steps={['01', '02', '03', '04', '05']}
                             activeStep={Math.min(5, activeStep)}
                             onUpdateIndex={this.onUpdateIndex}
                             onGoBack={this.onGoBack}

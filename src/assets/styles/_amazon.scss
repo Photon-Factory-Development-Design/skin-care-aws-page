@@ -41,7 +41,7 @@ ul li {
 }
 
 .react-multiple-carousel__arrow::before {
-    color: #C49C57 !important;
+    color: #c49c57 !important;
     font-size: 20px;
 }
 
@@ -74,4 +74,10 @@ ul li {
     flex-direction: row;
     justify-content: center;
     cursor: pointer;
+}
+
+.MuiStepConnector-alternativeLabel {
+    top: 30px !important;
+    left: calc(-50% + 30px) !important;
+    right: calc(50% + 30px) !important;
 }
