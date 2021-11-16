@@ -46,6 +46,7 @@ class Question {
         },
         {
             showBg: true,
+            isMulti: true,
             label: 'What other parts of the body are you interested in? Select all that apply:',
             answers: [
                 { id: 'eyes', label: 'Eyes' },

@@ -39,20 +39,32 @@ class QuizContainer extends React.Component {
         if (this.isQuizCompleted()) {
             // TODO: questions
             const { answers } = this.state;
-            console.log(answers);
+            const otherConcernsAnswer = answers[3];
 
-            const otherConcerns = questions.getProductsForAnswer([
-                answers[0],
-                answers[2],
-                answers[3]
-            ]);
+            let otherConcerns = [];
+
+            otherConcernsAnswer.forEach((item) => {
+                questions
+                    .getProductsForAnswer([answers[0], answers[2], item])
+                    .forEach((product) => {
+                        const isExists = otherConcerns.some(
+                            (item) =>
+                                item.data.ASIN.value === product.data.ASIN.value
+                        );
+
+                        if (!isExists) {
+                            otherConcerns.push(product);
+                        }
+                    });
+            });
+
             const recommendeds = questions.getProductsForAnswer([
                 answers[0],
                 answers[2],
                 'recommended'
             ]);
 
-            return [otherConcerns, recommendeds];
+            return [recommendeds, otherConcerns];
         }
         return null;
     };
