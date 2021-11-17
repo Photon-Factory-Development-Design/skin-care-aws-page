@@ -60,7 +60,7 @@ class ProductsView extends React.Component {
 
                     {this.renderProductSection(
                         'OTHER AREAS OF CONCERN',
-                        'We recommend the following products to specifically address stated areas of concern (including eyes, neck, hand, lips and body).',
+                        'We recommend the following products to specifically address the eyes, neck, hands, lips and body.',
                         otherConcern,
                         true
                     )}
