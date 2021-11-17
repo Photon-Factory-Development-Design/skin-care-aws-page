@@ -9,7 +9,7 @@ class Question {
         // },
         {
             showBg: true,
-            label: 'Create your personalized Perfect Skincare Routine if there was something you could change or improve about your skin, what would it be? Pick one',
+            label: 'If there was something you could change or improve about your skin, what would it be? Pick one',
             answers: [
                 { id: 'line_wrinkles', label: 'Lines/Wrinkles' },
                 { id: 'hyperpigmentation', label: 'Hyperpigmentation' },
