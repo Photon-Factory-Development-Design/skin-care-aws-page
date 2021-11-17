@@ -13,7 +13,7 @@ class QuizContainer extends React.Component {
     onCompleteAnswer = (answer) => {
         this.setState((prev) => ({
             activeStep: prev.activeStep + 1,
-            answers: [].concat(prev.answers, [answer])
+            answers: [].concat(prev.answers.slice(0, prev.activeStep), [answer])
         }));
     };
 
