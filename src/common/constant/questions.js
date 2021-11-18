@@ -9,7 +9,7 @@ class Question {
         // },
         {
             showBg: true,
-            label: 'If there was something you could change or improve about your skin, what would it be? Pick one',
+            label: 'If there was something you could change or improve about your skin, what would it be? Pick one.',
             answers: [
                 { id: 'line_wrinkles', label: 'Lines/Wrinkles' },
                 { id: 'hyperpigmentation', label: 'Hyperpigmentation' },
@@ -20,7 +20,7 @@ class Question {
         },
         {
             showBg: true,
-            label: 'What else would you change or improve about your skin?',
+            label: 'What else would you change or improve about your skin? Select all that apply.',
             answers: [
                 { id: 'line_wrinkles', label: 'Lines/Wrinkles' },
                 { id: 'hyperpigmentation', label: 'Hyperpigmentation' },
@@ -211,14 +211,14 @@ class Question {
 
     getQuestionsLength = () => {
         return this.questions.length;
-    }
+    };
 
     /**
      * @return Array of Product Asins
      * @param {*} answer array of question answer path
      */
     getProductsForAnswer = (answer) => {
-        console.log('getProductsForAnswer', answer)
+        console.log('getProductsForAnswer', answer);
         let _productAsins = this.productsMap;
 
         answer.forEach((item) => {
