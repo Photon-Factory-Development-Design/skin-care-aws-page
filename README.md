@@ -1,4 +1,4 @@
-# Mcafee AWS Product Selector App
+# Skincare AWS Product Selector App
 
 This project was built by React and deployed to AWS Ads pages. 
 
