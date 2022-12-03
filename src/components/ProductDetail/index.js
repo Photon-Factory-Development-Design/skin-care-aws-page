@@ -131,7 +131,7 @@ const ProductDetail = React.forwardRef(
                     <div className="adt-product-features">
                         <h3>Product features</h3>
                         <ul className="adt-feature-bullets a-size-base a-color-base">
-                            {productFeatures.map((feature, index) => (
+                            {(productFeatures || []).map((feature, index) => (
                                 <li key={`product-feature-${index}`}>
                                     {feature}
                                 </li>

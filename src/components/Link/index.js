@@ -13,6 +13,7 @@ const Link = ({ children, ...props }) => {
         if (ref.current && !initRef.current) {
             initRef.current = true;
             // build ATC
+            console.log('buildAtc', ref.current);
             buildATC(ref.current);
         }
     }, [ref]);

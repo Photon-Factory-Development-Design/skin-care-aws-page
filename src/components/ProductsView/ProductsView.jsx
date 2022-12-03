@@ -10,6 +10,7 @@ import styles from './ProductsView.module.scss';
 
 class ProductsView extends React.Component {
     renderProductSection = (title, description, products, isLast = false) => {
+        console.log('ProductsView', this.props);
         return (
             <div
                 className={cn(styles.products_section, {
@@ -22,6 +23,7 @@ class ProductsView extends React.Component {
                         <ProductCard
                             key={`product-item-${index}`}
                             product={product}
+                            setDetailProduct={this.props.setDetailProduct}
                             {...product.data}
                         />
                     ))}

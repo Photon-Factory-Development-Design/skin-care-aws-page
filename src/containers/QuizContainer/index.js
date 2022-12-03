@@ -78,12 +78,14 @@ class QuizContainer extends React.Component {
 
     showProducts = () => {
         const [recommended, others] = this.getProducts();
+        console.log('showProducts', this.props);
 
         return (
             <ProductsView
                 recommended={recommended}
                 otherConcern={others}
                 retakeQuiz={this.retakeQuiz}
+                setDetailProduct={this.props.setDetailProduct}
             />
         );
     };
@@ -93,6 +95,8 @@ class QuizContainer extends React.Component {
         const currentQuestion = questions.getQuestionForStep(activeStep);
 
         const isQuizCompleted = this.isQuizCompleted();
+
+        console.log('render', this.props);
 
         return (
             <div
