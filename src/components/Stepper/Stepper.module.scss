@@ -1,11 +1,15 @@
-@import "assets/styles/mixins/breakpoints";
+@import 'assets/styles/mixins/breakpoints';
 
 .stepperLabel {
-    @include breakpoint("md-max") {
+    @include breakpoint('md-max') {
         font-size: 15px;
     }
 }
 
 .go_back {
-    color: #DDBDA8 !important;
+    // color: #DDBDA8 !important;
+    color: black !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif !important;
 }

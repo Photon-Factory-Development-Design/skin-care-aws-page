@@ -44,7 +44,7 @@ class StepView extends React.Component {
     };
 
     render() {
-        const { label, isMulti, showFaceImage, step } = this.props;
+        const { label, isMulti, showFaceImage } = this.props;
         const { selectedAnswers } = this.state;
 
         const _answers = this.getAnswers();
@@ -86,12 +86,12 @@ class StepView extends React.Component {
                         </div>
                     )}
 
-                    <div className={styles.step_container}>
+                    {/* <div className={styles.step_container}>
                         <div className={styles.step}>Step</div>
                         <div className={styles.number}>
                             {step.pad && step.pad(2)}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

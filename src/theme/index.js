@@ -59,8 +59,8 @@ const Theme = createMuiTheme({
                 }
             },
             label: {
-                fontFamily: 'ChampionLiteweight',
-                fontSize: '12px'
+                // fontFamily: 'ChampionLiteweight',
+                // fontSize: '12px'
             }
         }
     }
